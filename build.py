@@ -50,5 +50,5 @@ if __name__ == "__main__":
     build_all_applications()
     while len(threads) > 0:
         pass
-    remove_remaining_containers()
-    threading.Thread(target=docker_compose_up).start()
+    #remove_remaining_containers()
+    #threading.Thread(target=docker_compose_up).start()
