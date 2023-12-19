@@ -13,8 +13,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Document(collection="event")
 public class Event {
 
+  @Id	
   private String id;
   private String transactionId;
   private String orderId;

@@ -13,8 +13,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Document(collection="order")
 public class Order {
 
+  @Id	
   private String id;
   private List<OrderProducts> products;
   private LocalDateTime createAt;
