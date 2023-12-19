@@ -1,15 +1,15 @@
-package br.com.microservices.orquestrared.orquestratorservice.core.dto;
+package br.com.microservices.orchestrared.orquestratorservice.core.dto;
 
-
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import br.com.microservices.orquestrared.orquestratorservice.core.enums.EEventSource;
-import br.com.microservices.orquestrared.orquestratorservice.core.enums.ESagaStatus;
+
+import br.com.microservices.orchestrated.orchestratorservice.core.enums.EEventSource;
+import br.com.microservices.orchestrated.orchestratorservice.core.enums.ESagaStatus;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor

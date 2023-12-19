@@ -1,4 +1,4 @@
-package br.com.microservices.orquestrared.inventoryservice.core.enums;
+package br.com.microservices.orchestrared.inventoryservice.core.enums;
 
 
 public enum ESagaStatus{

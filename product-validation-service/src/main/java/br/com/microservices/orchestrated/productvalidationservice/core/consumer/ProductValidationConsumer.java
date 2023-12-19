@@ -1,11 +1,11 @@
 package br.com.microservices.orchestrared.productvalidationservice.core.consumer;
 
-import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
-import br.com.microservices.orchestrared.productvalidationservice.core.utils.JsonUtil;
-import org.springframework.kafka.annotation.KafkaListener;
+import br.com.microservices.orchestrated.productvalidationservice.core.utils.JsonUtil;
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Component

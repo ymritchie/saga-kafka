@@ -1,15 +1,14 @@
-package br.com.microservices.orquestrared.productvalidationservice.core.dto;
+package br.com.microservices.orchestrared.productvalidationservice.core.dto;
 
-
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-import br.com.microservices.orquestrared.productvalidationservice.core.enums.ESagaStatus;
+import br.com.microservices.orchestrated.productvalidationservice.core.enums.ESagaStatus;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 @Data

@@ -1,11 +1,11 @@
-package br.com.microservices.orquestrared.inventoryservice.core.utils;
+package br.com.microservices.orchestrared.inventoryservice.core.utils;
 
 import org.springframework.stereotype.Component;
 
-import lombok.AllArgsConstructor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import br.com.microservices.orquestrared.inventoryservice.core.dto.Event;
+import br.com.microservices.orchestrared.inventoryservice.core.dto.Event;
+import lombok.AllArgsConstructor;
 
 @Component
 @AllArgsConstructor
@@ -13,7 +13,7 @@ public class JsonUtil{
 
   private final ObjectMapper objectMapper;
 
-  private String toJson(Object obj){
+  public String toJson(Object obj){
     try {
       return objectMapper.writeValueAsString(obj);
     } catch (Exception e){
@@ -21,7 +21,7 @@ public class JsonUtil{
     }
   }
 
-  private Event toEvent(String json){
+  public Event toEvent(String json){
     try {
       return objectMapper.readValue(json, Event.class);
     } catch (Exception e){

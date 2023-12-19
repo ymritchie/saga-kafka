@@ -1,11 +1,11 @@
 package br.com.microservices.orchestrared.orchestratorservice.core.consumer;
 
-import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 import br.com.microservices.orchestrared.orchestratorservice.core.utils.JsonUtil;
-import org.springframework.kafka.annotation.KafkaListener;
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Component

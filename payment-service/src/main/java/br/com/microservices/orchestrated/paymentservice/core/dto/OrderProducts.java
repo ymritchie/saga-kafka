@@ -1,9 +1,9 @@
-package br.com.microservices.orquestrared.paymentservice.core.dto;
+package br.com.microservices.orchestrared.paymentservice.core.dto;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
 
 @Data
 @NoArgsConstructor

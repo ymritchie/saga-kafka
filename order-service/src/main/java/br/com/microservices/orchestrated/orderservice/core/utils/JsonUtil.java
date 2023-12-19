@@ -1,11 +1,11 @@
-package br.com.microservices.orquestrared.orderservice.core.utils;
+package br.com.microservices.orchestrared.orderservice.core.utils;
 
 import org.springframework.stereotype.Component;
 
-import lombok.AllArgsConstructor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import br.com.microservices.orquestrared.orderservice.core.document.Event;
+import lombok.AllArgsConstructor;
 
 
 @Component
@@ -14,19 +14,19 @@ public class JsonUtil{
 
   private final ObjectMapper objectMapper;
 
-  private String toJson(Object obj){
-    try {
-      return objectMapper.writeValueAsString(obj);
-    } catch (Exception e){
-      return "";
-    }
-  }
+  public String toJson(Object obj){
+	    try {
+	      return objectMapper.writeValueAsString(obj);
+	    } catch (Exception e){
+	      return "";
+	    }
+	  }
 
-  private Event toEvent(String json){
-    try {
-      return objectMapper.readValue(json, Event.class);
-    } catch (Exception e){
-      return new Event();
-    }
-  }
+	  public Event toEvent(String json){
+	    try {
+	      return objectMapper.readValue(json, Event.class);
+	    } catch (Exception e){
+	      return new Event();
+	    }
+	  }
 }

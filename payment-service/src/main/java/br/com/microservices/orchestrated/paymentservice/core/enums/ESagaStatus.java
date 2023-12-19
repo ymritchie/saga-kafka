@@ -1,4 +1,4 @@
-package br.com.microservices.orquestrared.paymentservice.core.enums;
+package br.com.microservices.orchestrared.paymentservice.core.enums;
 
 
 public enum ESagaStatus{

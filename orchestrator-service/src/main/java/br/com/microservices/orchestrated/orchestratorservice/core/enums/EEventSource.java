@@ -1,4 +1,4 @@
-package br.com.microservices.orquestrared.orquestratorservice.core.enums;
+package br.com.microservices.orchestrared.orquestratorservice.core.enums;
 
 
 public enum EEventSource{

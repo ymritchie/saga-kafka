@@ -1,8 +1,9 @@
-package br.com.microservices.orquestrared.inventoryservice.core.producer;
+package br.com.microservices.orchestrared.inventoryservice.core.producer;
+
+import org.springframework.stereotype.Component;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
 
 @Slf4j
 @AllArgsConstructor
