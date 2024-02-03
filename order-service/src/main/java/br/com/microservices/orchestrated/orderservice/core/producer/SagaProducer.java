@@ -1,6 +1,7 @@
-package br.com.microservices.orchestrared.orderservice.core.producer;
+package br.com.microservices.orchestrated.orderservice.core.producer;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
 import lombok.RequiredArgsConstructor;

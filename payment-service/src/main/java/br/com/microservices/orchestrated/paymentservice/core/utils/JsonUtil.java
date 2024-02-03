@@ -1,10 +1,10 @@
-package br.com.microservices.orquestrared.paymentservice.core.utils;
+package br.com.microservices.orchestrated.paymentservice.core.utils;
 
+import br.com.microservices.orchestrated.paymentservice.core.dto.Event;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import br.com.microservices.orchestrared.paymentservice.core.dto.Event;
 import lombok.AllArgsConstructor;
 
 @Component

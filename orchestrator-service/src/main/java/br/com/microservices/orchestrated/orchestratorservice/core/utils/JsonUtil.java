@@ -1,16 +1,14 @@
-package br.com.microservices.orchestrated.orderservice.core.utils;
+package br.com.microservices.orchestrated.orchestratorservice.core.utils;
 
-import br.com.microservices.orchestrated.orderservice.core.document.Event;
-import org.springframework.stereotype.Component;
-
+import br.com.microservices.orchestrated.orchestratorservice.core.dto.Event;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Component;
 
 
 @Component
 @AllArgsConstructor
-public class JsonUtil{
+public class JsonUtil {
 
   private final ObjectMapper objectMapper;
 

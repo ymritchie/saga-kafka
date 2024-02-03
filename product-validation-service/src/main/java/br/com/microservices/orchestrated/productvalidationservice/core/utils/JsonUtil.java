@@ -1,10 +1,10 @@
-package br.com.microservices.orquestrared.productvalidationservice.core.utils;
+package br.com.microservices.orchestrated.productvalidationservice.core.utils;
 
+import br.com.microservices.orchestrated.productvalidationservice.core.dto.Event;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import br.com.microservices.orchestrared.productvalidationservice.core.dto.Event;
 import lombok.AllArgsConstructor;
 
 

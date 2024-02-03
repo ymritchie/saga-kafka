@@ -1,5 +1,6 @@
-package br.com.microservices.orchestrared.inventoryservice.core.producer;
+package br.com.microservices.orchestrated.orchestratorservice.core.producer;
 
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
 import lombok.AllArgsConstructor;

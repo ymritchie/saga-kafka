@@ -1,11 +1,10 @@
-package br.com.microservices.orchestrared.inventoryservice.core.consumer;
-
-import org.springframework.kafka.annotation.KafkaListener;
-import org.springframework.stereotype.Component;
+package br.com.microservices.orchestrated.inventoryservice.core.consumer;
 
 import br.com.microservices.orchestrated.inventoryservice.core.utils.JsonUtil;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component

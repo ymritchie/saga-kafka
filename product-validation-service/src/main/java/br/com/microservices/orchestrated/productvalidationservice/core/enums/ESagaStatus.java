@@ -1,4 +1,4 @@
-package br.com.microservices.orchestrared.productvalidationservice.core.enums;
+package br.com.microservices.orchestrated.productvalidationservice.core.enums;
 
 
 public enum ESagaStatus{

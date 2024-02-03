@@ -1,11 +1,9 @@
-package br.com.microservices.orchestrared.inventoryservice.core.utils;
+package br.com.microservices.orchestrated.inventoryservice.core.utils;
 
-import org.springframework.stereotype.Component;
-
+import br.com.microservices.orchestrated.inventoryservice.core.dto.Event;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-import br.com.microservices.orchestrared.inventoryservice.core.dto.Event;
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Component;
 
 @Component
 @AllArgsConstructor

@@ -3,11 +3,11 @@ package br.com.microservices.orchestrated.orderservice.core.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructors;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
-@NoArgsConstructors
+@NoArgsConstructor
 public class EventFilter {
 	
 	private String orderId;

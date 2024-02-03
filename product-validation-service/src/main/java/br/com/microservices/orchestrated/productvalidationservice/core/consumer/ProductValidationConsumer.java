@@ -1,4 +1,4 @@
-package br.com.microservices.orchestrared.productvalidationservice.core.consumer;
+package br.com.microservices.orchestrated.productvalidationservice.core.consumer;
 
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;

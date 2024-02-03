@@ -1,4 +1,4 @@
-package br.com.microservices.orquestrared.orderservice.core.document;
+package br.com.microservices.orchestrated.orderservice.core.document;
 
 
 import java.time.LocalDateTime;
@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @NoArgsConstructor
@@ -16,7 +18,7 @@ import lombok.NoArgsConstructor;
 @Document(collection="order")
 public class Order {
 
-  @Id	
+  @Id
   private String id;
   private List<OrderProducts> products;
   private LocalDateTime createAt;

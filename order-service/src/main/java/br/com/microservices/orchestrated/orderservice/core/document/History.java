@@ -1,4 +1,4 @@
-package br.com.microservices.orquestrared.orderservice.core.document;
+package br.com.microservices.orchestrated.orderservice.core.document;
 
 
 import java.time.LocalDateTime;

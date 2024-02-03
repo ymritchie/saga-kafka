@@ -1,4 +1,4 @@
-package br.com.microservices.orchestrared.productvalidationservice.core.dto;
+package br.com.microservices.orchestrated.productvalidationservice.core.dto;
 
 
 import java.time.LocalDateTime;

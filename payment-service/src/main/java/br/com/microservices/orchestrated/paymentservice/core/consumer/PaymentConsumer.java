@@ -1,4 +1,4 @@
-package br.com.microservices.orchestrared.paymentservice.core.consumer;
+package br.com.microservices.orchestrated.paymentservice.core.consumer;
 
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Component
 @AllArgsConstructor
-public class ProductValidationConsumer {
+public class PaymentConsumer {
 
   private final JsonUtil jsonUtil;
 

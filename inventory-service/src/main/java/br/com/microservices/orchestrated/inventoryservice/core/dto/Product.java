@@ -1,4 +1,4 @@
-package br.com.microservices.orchestrared.inventoryservice.core.dto;
+package br.com.microservices.orchestrated.inventoryservice.core.dto;
 
 
 import lombok.AllArgsConstructor;
