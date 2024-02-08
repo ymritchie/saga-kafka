@@ -2,9 +2,9 @@ version: '3'
 
 services:
 
-  mongo-db-order:
+  order-db:
     image: mongo:latest
-    container_name: mongo-db-order
+    container_name: order-db
     restart: always
     networks:
       - orchestrator-saga
@@ -74,12 +74,12 @@ services:
     container_name: order-service
     depends_on:
       - kafka
-      - mongo-db-order
+      - order-db
     networks:
       - orchestrator-saga
     environment:
       - KAFKA_BROKER=kafka:29092
-      - MONGO_DB_URI=mongodb://admin:123456@mongo-db-order:27017
+      - MONGO_DB_URI=mongodb://admin:123456@order-db:27017
     ports:
       - "3000:3000"
 

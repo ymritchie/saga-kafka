@@ -24,6 +24,6 @@ public class Event {
   private EEventSource source;
   private ESagaStatus status;
   private List<History> eventHistory;
-  private LocalDateTime createAt;
+  private LocalDateTime createdAt;
 
 }

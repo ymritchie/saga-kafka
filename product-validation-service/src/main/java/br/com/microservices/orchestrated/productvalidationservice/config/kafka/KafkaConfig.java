@@ -37,8 +37,8 @@ public class KafkaConfig {
     @Value("${spring.kafka.topic.orchestrator}")
     private String orchestratorTopic;
 
-    @Value("${spring.kafka.topic.product-validation-succes}")
-    private String productValidationSuccesTopic;
+    @Value("${spring.kafka.topic.product-validation-success}")
+    private String productValidationSuccessTopic;
 
     @Value("${spring.kafka.topic.product-validation-fail}")
     private String productValidationFailTopic;
@@ -92,8 +92,8 @@ public class KafkaConfig {
     }
 
     @Bean
-    public NewTopic productValidationSuccesTopic(){
-        return buildTopic(this.productValidationSuccesTopic);
+    public NewTopic productValidationSuccessTopic(){
+        return buildTopic(this.productValidationSuccessTopic);
     }
 
     @Bean

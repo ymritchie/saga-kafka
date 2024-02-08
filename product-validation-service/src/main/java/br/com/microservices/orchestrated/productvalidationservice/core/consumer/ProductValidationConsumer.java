@@ -1,5 +1,6 @@
 package br.com.microservices.orchestrated.productvalidationservice.core.consumer;
 
+import br.com.microservices.orchestrated.productvalidationservice.core.service.ProductValidationService;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
@@ -12,6 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 @AllArgsConstructor
 public class ProductValidationConsumer {
 
+  private final ProductValidationService productValidationService;
   private final JsonUtil jsonUtil;
 
   @KafkaListener(
@@ -21,7 +23,7 @@ public class ProductValidationConsumer {
   public void consumerSuccessEvent(String payload){
     log.info("Recevendo evento {} de product-validation-success", payload);
     var event = jsonUtil.toEvent(payload);
-    log.info(event.toString());
+    productValidationService.validarProductosExistentes(event);
   }
 
   @KafkaListener(
@@ -31,7 +33,7 @@ public class ProductValidationConsumer {
   public void consumerFailEvent(String payload){
     log.info("Recevendo evento {} de product-validation-fail", payload);
     var event = jsonUtil.toEvent(payload);
-    log.info(event.toString());
+    productValidationService.rollbackEvent(event);
   }
 
 
