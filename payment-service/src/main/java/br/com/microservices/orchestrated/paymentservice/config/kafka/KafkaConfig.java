@@ -36,7 +36,7 @@ public class KafkaConfig {
     @Value("${spring.kafka.topic.orchestrator}")
     private String orchestratorTopic;
 
-    @Value("${spring.kafka.topic.payment-succes}")
+    @Value("${spring.kafka.topic.payment-success}")
     private String paymentSuccesTopic;
 
     @Value("${spring.kafka.topic.payment-fail}")
@@ -91,7 +91,7 @@ public class KafkaConfig {
     }
 
     @Bean
-    public NewTopic paymentSuccesTopic(){
+    public NewTopic paymentSuccessTopic(){
         return buildTopic(this.paymentSuccesTopic);
     }
 

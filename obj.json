@@ -17,10 +17,11 @@
           "code": "BOOKS",
           "unitValue": 9.9
         },
-        "quantity": 1
+        "quantity": 2
       }
     ],
     "createdAt": "2024-02-07T21:18:20.335943085",
     "transactionId": "1682087576536_99d2ca6c-f074-41a6-92e0-21700148b519"
-  }
+  },
+  "createdAt": "2024-02-07T21:18:20.335943085"
 }

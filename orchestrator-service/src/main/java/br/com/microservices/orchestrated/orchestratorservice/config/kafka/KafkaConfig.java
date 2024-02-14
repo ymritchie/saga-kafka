@@ -90,56 +90,56 @@ public class KafkaConfig {
 
     @Bean
     public NewTopic startSagaTopic(){
-        return buildTopic(START_SAGA.getTopics());
+        return buildTopic(START_SAGA.getTopic());
     }
 
     @Bean
     public NewTopic orchestratorTopic(){
-        return buildTopic(BASE_ORCHESTRATOR.getTopics());
+        return buildTopic(BASE_ORCHESTRATOR.getTopic());
     }
 
     @Bean
     public NewTopic finishSuccessTopic(){
-        return buildTopic(FINISH_SUCCESS.getTopics());
+        return buildTopic(FINISH_SUCCESS.getTopic());
     }
 
     @Bean
     public NewTopic finishFailTopic(){
-        return buildTopic(FINISH_FAIL.getTopics());
+        return buildTopic(FINISH_FAIL.getTopic());
     }
 
     @Bean
     public NewTopic productValidationSuccesTopic(){
-        return buildTopic(PRODUCT_VALIDATION_SUCESS.getTopics());
+        return buildTopic(PRODUCT_VALIDATION_SUCESS.getTopic());
     }
 
     @Bean
     public NewTopic productValidationFailTopic(){
-      return buildTopic(PRODUCT_VALIDATION_FAIL.getTopics());
+      return buildTopic(PRODUCT_VALIDATION_FAIL.getTopic());
     }
 
     @Bean
     public NewTopic paymentSuccesTopic(){
-        return buildTopic(PAYMENT_SUCCESS.getTopics());
+        return buildTopic(PAYMENT_SUCCESS.getTopic());
     }
 
     @Bean
     public NewTopic paymentFailTopic(){
-        return buildTopic(PAYMENT_FAIL.getTopics());
+        return buildTopic(PAYMENT_FAIL.getTopic());
     }
 
     @Bean
     public NewTopic inventorySuccesTopic(){
-        return buildTopic(INVENTORY_SUCCESS.getTopics());
+        return buildTopic(INVENTORY_SUCCESS.getTopic());
     }
 
     @Bean
     public NewTopic inventoryFailTopic(){
-        return buildTopic(INVENTORY_FAIL.getTopics());
+        return buildTopic(INVENTORY_FAIL.getTopic());
     }
 
     @Bean
     public NewTopic notifyEndingTopic(){
-        return buildTopic(NOTIFY_ENDING.getTopics());
+        return buildTopic(NOTIFY_ENDING.getTopic());
     }
 }

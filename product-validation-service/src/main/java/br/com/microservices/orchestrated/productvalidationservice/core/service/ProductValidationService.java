@@ -26,11 +26,8 @@ public class ProductValidationService {
     private static final String CURRENT_SOURCE = "PRODUCT_VALIDATION_SERVICE";
 
     private final JsonUtil jsonUtil;
-
     private final KafkaProducer producer;
-
     private final ProductRepositoty productRepositoty;
-
     private final ValidationRepository validationRepository;
 
     public void validarProductosExistentes(Event event){

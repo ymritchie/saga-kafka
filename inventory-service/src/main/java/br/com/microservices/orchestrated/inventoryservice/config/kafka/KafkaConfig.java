@@ -35,7 +35,7 @@ public class KafkaConfig {
     @Value("${spring.kafka.topic.orchestrator}")
     private String orchestratorTopic;
 
-    @Value("${spring.kafka.topic.inventory-succes}")
+    @Value("${spring.kafka.topic.inventory-success}")
     private String inventorySuccesTopic;
 
     @Value("${spring.kafka.topic.inventory-fail}")
@@ -90,7 +90,7 @@ public class KafkaConfig {
     }
 
     @Bean
-    public NewTopic inventorySuccesTopic(){
+    public NewTopic inventorySuccessTopic(){
         return buildTopic(this.inventorySuccesTopic);
     }
 
