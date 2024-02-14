@@ -1,14 +1,13 @@
 package br.com.microservices.choreography.productvalidationservice.core.service;
 
-import br.com.microservices.choreography.productvalidationservice.core.repository.ProductRepositoty;
-import br.com.microservices.choreography.productvalidationservice.core.repository.ValidationRepository;
 import br.com.microservices.choreography.productvalidationservice.config.exception.ValidationException;
 import br.com.microservices.choreography.productvalidationservice.core.dto.Event;
 import br.com.microservices.choreography.productvalidationservice.core.dto.History;
 import br.com.microservices.choreography.productvalidationservice.core.dto.OrderProducts;
 import br.com.microservices.choreography.productvalidationservice.core.model.Validation;
-import br.com.microservices.choreography.productvalidationservice.core.producer.KafkaProducer;
-import br.com.microservices.choreography.productvalidationservice.core.utils.JsonUtil;
+import br.com.microservices.choreography.productvalidationservice.core.repository.ProductRepositoty;
+import br.com.microservices.choreography.productvalidationservice.core.repository.ValidationRepository;
+import br.com.microservices.choreography.productvalidationservice.core.saga.SagaExecutionController;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -25,8 +24,8 @@ public class ProductValidationService {
 
     private static final String CURRENT_SOURCE = "PRODUCT_VALIDATION_SERVICE";
 
-    private final JsonUtil jsonUtil;
-    private final KafkaProducer producer;
+    private final SagaExecutionController sagaExecutionController;
+
     private final ProductRepositoty productRepositoty;
     private final ValidationRepository validationRepository;
 
@@ -40,7 +39,7 @@ public class ProductValidationService {
             handleFailCurrentNotEexecuted(event, e.getMessage());
         }
 
-        producer.sendEvent(jsonUtil.toJson(event));
+        sagaExecutionController.handleSaga(event);
     }
 
 
@@ -118,7 +117,7 @@ public class ProductValidationService {
         event.setStatus(FAIL);
         event.setSource(CURRENT_SOURCE);
         addHistory(event, "Rollback executado para validação do produto!!");
-        producer.sendEvent(jsonUtil.toJson(event));
+        sagaExecutionController.handleSaga(event);
     }
 
     private void changeValidationSuccessStatus(Event event, boolean success) {

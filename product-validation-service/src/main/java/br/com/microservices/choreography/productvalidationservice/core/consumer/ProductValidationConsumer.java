@@ -18,10 +18,10 @@ public class ProductValidationConsumer {
 
   @KafkaListener(
     groupId = "${spring.kafka.consumer.group-id}",
-    topics = "${spring.kafka.topic.product-validation-success}"
+    topics = "${spring.kafka.topic.product-validation-start}"
   )
   public void consumerSuccessEvent(String payload){
-    log.info("Recevendo evento {} de product-validation-success", payload);
+    log.info("Recevendo evento {} de product-validation-start", payload);
     var event = jsonUtil.toEvent(payload);
     productValidationService.validarProductosExistentes(event);
   }

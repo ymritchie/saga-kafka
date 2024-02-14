@@ -6,6 +6,7 @@ import br.com.microservices.choreography.paymentservice.core.dto.History;
 import br.com.microservices.choreography.paymentservice.core.dto.OrderProducts;
 import br.com.microservices.choreography.paymentservice.core.enums.ESagaStatus;
 import br.com.microservices.choreography.paymentservice.core.producer.KafkaProducer;
+import br.com.microservices.choreography.paymentservice.core.saga.SagaExecutionController;
 import br.com.microservices.choreography.paymentservice.core.utils.JsonUtil;
 import br.com.microservices.choreography.paymentservice.core.enums.EPaymentStatus;
 import br.com.microservices.choreography.paymentservice.core.model.Payment;
@@ -25,8 +26,7 @@ public class PaymentService {
     private static final Double REDUCE_INITIAL_VALUE = 0.0;
     private static final Double MINIMUM_AMOUNT_VALUE = 0.1;
 
-    private final JsonUtil jsonUtil;
-    private final KafkaProducer producer;
+    private final SagaExecutionController sagaExecutionController;
     private final PaymentRepository paymentRepository;
 
     public void realizePayment(Event event){
@@ -41,7 +41,7 @@ public class PaymentService {
             log.error("Erro ao fazer pagmentos: ", e);
             handleFailCurrentNotEexecuted(event, e.getMessage());
         }
-        producer.sendEvent(jsonUtil.toJson(event));
+        sagaExecutionController.handleSaga(event);
     }
 
 
@@ -135,7 +135,7 @@ public class PaymentService {
             addHistory(event, "Rollback não executado para o pagamento: ".concat(e.getMessage()));
         }
 
-        producer.sendEvent(jsonUtil.toJson(event));
+        sagaExecutionController.handleSaga(event);
     }
 
     private void changePaymentStatusToRefund(Event event){
